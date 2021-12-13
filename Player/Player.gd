@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
-var acc := 20.0
-var max_speed := 200
+var acc := 17.0
+var max_speed := 120
 var move_vec := Vector2()
 
-var friction := 0.92
+var friction := 0.8
 
 var bullet = preload("res://Player/Bullet.tscn")
 var ammo = 2
