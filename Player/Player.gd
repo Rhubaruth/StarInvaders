@@ -15,9 +15,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	
-	
+func _process(_delta):
 	var input_vec = Vector2()
 	if Input.is_action_pressed("left"):
 		input_vec.x = -1
@@ -40,7 +38,17 @@ func shoot():
 	pass
 
 
-func _input(event):
+func hit():
+	for i in range(3):
+		if get_child(i).visible:
+			get_child(i).visible = false
+			break
+	if !$Trunk.visible:
+		print("GAMEOVER")
+	
+
+
+func _input(_event):
 	if !Input.is_action_just_pressed("shoot"):
 		return
 	

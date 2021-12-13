@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Player/Ship.png" type="Texture" id=1]
+[ext_resource path="res://Player/Ship_Wings.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Player/Ship_Trunk.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
@@ -14,20 +15,19 @@ __meta__ = {
 
 [node name="L Wing" type="Sprite" parent="."]
 texture = ExtResource( 1 )
-hframes = 3
+hframes = 2
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="R Wing" type="Sprite" parent="."]
 texture = ExtResource( 1 )
-hframes = 3
-frame = 2
+hframes = 2
+frame = 1
 
 [node name="Trunk" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-hframes = 3
-frame = 1
+texture = ExtResource( 3 )
+hframes = 6
 __meta__ = {
 "_editor_description_": ""
 }
